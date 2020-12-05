@@ -14,6 +14,7 @@ import com.yabets.domain.Car;
 import com.yabets.domain.CarRepository;
 import com.yabets.domain.Owner;
 import com.yabets.domain.OwnerRepository;
+import com.yabets.domain.User;
 import com.yabets.domain.UserRepository;
 
 @SpringBootApplication
@@ -51,8 +52,8 @@ public class Application extends SpringBootServletInitializer {
 			logger.info("Found car size " + repository.findByBrand("Ford").size());
 			logger.info(repository.findByBrandOrColor("Ford", "Silver").toString());
 			
-//			urepository.save(new com.example.demo.domain.User("user", "$2a$04$1.YhMIgNX/8TkCKGFUONWO1waedKhQ5KrnB30fl0Q01QKqmzLf.Zi", "USER"));
-//			urepository.save(new com.example.demo.domain.User("admin", "$2a$04$KNLUwOWHVQZVpXyMBNc7JOzbLiBjb9Tk9bP7KNcPI12ICuvzXQQKG", "ADMIN"));
+			urepository.save(new User("user", "$2a$04$1.YhMIgNX/8TkCKGFUONWO1waedKhQ5KrnB30fl0Q01QKqmzLf.Zi", "USER"));
+			urepository.save(new User("admin", "$2a$04$KNLUwOWHVQZVpXyMBNc7JOzbLiBjb9Tk9bP7KNcPI12ICuvzXQQKG", "ADMIN"));
 
 		};
 	}
